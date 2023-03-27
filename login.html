@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="assets/bootstrap.css">
+    <link rel="stylesheet" href="css/login.css">
 
     <script src="assets/jQuery.js"></script>
     <script src="assets/bootstrap.bundle.min.js"></script>
@@ -14,12 +15,23 @@
     <title>GFormLogin</title>
 </head>
 <body>
-    <form action="php/login.php" method="post">
-        <label for="email" class="form-label">Email:</label>
-        <input type="text" id="email" name="email"><br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password"><br>
-        <input type="submit">
-    </form>
+    <div class="form-container">
+        <form>
+            <div class="form-floating mb-3">
+                <input for="email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Email address</label>
+            </div>
+            <div class="form-floating">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password" for="password">
+                <label for="floatingPassword">Password</label>
+            </div>
+            <div class="mb-3 mt-2 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1" >
+                <label class="form-check-label" for="exampleCheck1">Keep Me Logged In</label>
+              </div>
+            <button type="button" class="btn btn-primary" onclick="log(this.form)">Log In</button>
+            
+        </form>
+    </div>
 </body>
 </html>

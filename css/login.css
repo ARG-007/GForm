@@ -1,0 +1,14 @@
+form{
+    padding: 2rem;
+    width: auto;
+}
+
+.form-container{
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 3px dashed black;
+    border-radius: 1rem;
+}
