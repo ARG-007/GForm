@@ -16,7 +16,7 @@
 </head>
 <body>
     <div class="form-container center container">
-        <form>
+        <form action="php/login.php" method="post">
             <div class="form-floating mb-3">
                 <input name="email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
                 <label for="floatingInput">Email address</label>
@@ -29,7 +29,7 @@
                 <input type="checkbox" class="form-check-input" id="keepLogCheck" name="">
                 <label class="form-check-label" for="keepLogCheck">Keep Me Logged In</label>
               </div>
-            <button type="button" class="btn btn-primary">Log In</button>
+            <button type="submit" class="btn btn-primary">Log In</button>
         </form>
     </div>
 </body>

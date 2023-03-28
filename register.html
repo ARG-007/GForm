@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="assets/bootstrap.css">
 
     <script src="js/register.js"></script>
+    <script src="assets/jQuery.js"></script>
 </head>
 <body>
     <div class="container center form-container">
@@ -23,7 +24,7 @@
                 <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password">
                 <label for="floatingPassword">Password</label>
             </div>
-            <button type="button" class="btn btn-primary">Register</button>
+            <button type="button" class="btn btn-primary" onclick="process(this.form)">Register</button>
         </form>
     </div>
 </body>
