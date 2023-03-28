@@ -1,5 +1,5 @@
 function process(form){
-    formData = new FormData(form);
+    let formData = new FormData(form);
     console.log(formData);
     // $.post("php/register.php",formData,(response)=>console.log(response),"JSON");
     $.ajax({
@@ -12,5 +12,4 @@ function process(form){
         error: (error) => console.log(error),
     });
 
-    document.location = "login.html";
 }

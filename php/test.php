@@ -18,7 +18,7 @@ $con = new mysqli($host, $user, $password, $dbname, $port, $socket)
 // $result->bind_result($res[],$res1[]);
 // $result->fetch();
 
-echo $res;
+// echo $res;
 //$con->close();
 
 ?>
