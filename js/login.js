@@ -1,6 +1,6 @@
-function log(form){
+function process(form){
     let formData = new FormData(form);
-
+    console.log(formData);
     $.ajax({
         url: "php/login.php",
         type: "POST",

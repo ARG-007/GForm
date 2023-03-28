@@ -16,10 +16,13 @@ $getUserPassword = $connection->prepare("SELECT password FROM {$table} WHERE ema
 $getUserPassword->bind_param("s",$email);
 
 $getUserPassword->execute();
-
+// $userPass = $getUserPassword->get_result();
+$getUserPassword->store_result();
 $getUserPassword->bind_result($userPass);
+$getUserPassword->fetch();
 
-if($password == $userPass){
+
+if($password === $userPass){
     echo "USER_ENTERED_CP";
 } else{
     echo "USER_ENTERED_NCP";
