@@ -1,16 +1,21 @@
 <?php
+// use MongoDB\Client;
+require '../assets/vendor/autoload.php'; 
 
-$mongo = new MongoClient();
+$mongo = new MongoDB\Client("mongodb://localhost:27017");
 echo "Successfully Connected";
 $gf = $mongo->GFormDB;
 echo "Selected GFormDB";
 $up = $gf->userProfiles;
 echo "Selected UserProfiles";
 
+$doc = array("email"=>"phantomArg@hg.com");
+$up->insertOne($doc);
+
 $cursor = $up->find();
 
 foreach ($cursor as $document){
-	echo "{$document['email']}\n";
+	echo "{$document['_id']}\n";
 }
 // phpinfo();
 
