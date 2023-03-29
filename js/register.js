@@ -25,5 +25,6 @@ function processResponse(response){
             break;
         default :
             window.localStorage.setItem("SessionID",response.trim());
+            location.href("profile.html");
     }
 }
