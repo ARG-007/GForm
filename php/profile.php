@@ -1,39 +1,54 @@
 <?php
 require '../assets/vendor/autoload.php'; 
 
-$redis = new Redis();
-$redis->connect("127.0.0.1",6379);
-//echo $redis->ping();
-
-
-$up = (new MongoDB\Client("mongodb://localhost:27017"))->GFormDB->userProfiles;
-$sessionId = $_POST['SessionID'];
-$redisMail = $redis->get($sessionId);
-//echo $redisMail;
+//Resolves Every Code Error into Server Error
+function ServerError(){
+    header("Internal Server Error",true,500);
+    exit("SERVER_ERROR");
+}
+set_exception_handler("ServerError");
+error_reporting(E_ERROR | E_PARSE); //Supresses Warnings
 
 if($_SERVER["REQUEST_METHOD"]=="GET"){
     header("Method Not Allowed",true,405);
 }
 
+//-----------------------------------------------------------------------------------------------//
+//                                       SERVER VARIABLES                                        //
+//===============================            MongoDB             ================================//
+$mongoIP="localhost";
+$mongoPort = "27017";
+
+$userProfile = (new MongoDB\Client("mongodb://{$mongoIP}:{$mongoPort}"))->GFormDB->userProfiles;
+//================================            REDIS               ===============================//
+$redisIP = "127.0.0.1";
+$redisPort = 6379;
+
+$redis = new Redis();
+$redis->connect($redisIP,$redisPort);
+//------------------------------------------------------------------------------------------------//
+
+
+$sessionId = $_POST['SessionID'];
+$redisMail = $redis->get($sessionId);
+
+
+
 
 if(!$redisMail) exit("SESSION_INVALID");
 
 if($_POST["REQUEST"]=="FORM_GET"){
-    $details = $up->findOne(["email"=>$redisMail]);
-    //echo gettype($details);
+    $details = $userProfile->findOne(["email"=>$redisMail]);
     echo json_encode($details);
     exit();
 }
 
 if($_POST["REQUEST"]=="FORM_PUT"){
-    // $details = array({
-    //     "userName"=>
-    // })
     unset($_POST["email"]);
     unset($_POST["REQUEST"]);
     unset($_POST["SessionID"]);
 
-    $up->findOneAndUpdate(["email"=>$redisMail],['$set'=>$_POST]);
+    $userProfile->findOneAndUpdate(["email"=>$redisMail],['$set'=>$_POST]);
     
 }
 
