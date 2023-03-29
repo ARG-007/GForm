@@ -1,3 +1,7 @@
+html{
+    background-image: url("assets/background.jpg");
+}
+
 form{
     padding: 2rem;
 }
