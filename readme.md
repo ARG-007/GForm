@@ -51,5 +51,3 @@
  - `test.php` : Used for Quick Mock of Codes
  -  ### Nothing Else !!!
 
-### `SOME UI ELEMENTS ARE UNFINISHED LIKE PROMPT WHEN USER SAVES`
-
