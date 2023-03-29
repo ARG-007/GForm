@@ -22,7 +22,7 @@
  - Database Name : `gform_regdb`
  - Table : `register`
  - Server IP: localhost(`127.0.0.1`) 
- - Server Port: `6379`
+ - Server Port: `3306`
  - Details can be changed in Variables present in top level of each file 
  Used In Pages :
  - `register.php` (For Credentials Storing) 
