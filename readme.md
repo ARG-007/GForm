@@ -10,7 +10,9 @@
 - Bootstrap on form to Support Responsiveness
 
 ## Server Environment:
+### THESE ARE DEFAULTS! SERVER VARIABLES CAN BE CHANGED IN `assets/serverConfig.php`
 
+### Use TestDB to Check Stored Values of MySQL, MongoDB, Redis
 ### PHP Server
 - version: 8.1.2
 - Extensions: `MongoDB`, `Redis`
@@ -22,8 +24,7 @@
  - Database Name : `gform_regdb`
  - Table : `register`
  - Server IP: localhost(`127.0.0.1`) 
- - Server Port: `3306`
- - Details can be changed in Variables present in top level of each file 
+ - Server Port: `3306` 
  Used In Pages :
  - `register.php` (For Credentials Storing) 
  - `login.php` (For Authentication)
@@ -45,9 +46,8 @@
  - Stores Single Session token Derieved from MongoDB ID which Expires after `10` Mins
  <br> Used In Pages: `register.php`, `login.php`, `profile.php` 
 
-### THE ABOVE REQUIREMENTS ARE NEEDED FOR EXECUTION OF THE PROJECT
 
 ### Deviations
- - `test.php` : Used for Quick PHP Code Testing
+ - `testDB.php` : Used for Inspecting Databases
  -  ### Nothing Else !!!
 

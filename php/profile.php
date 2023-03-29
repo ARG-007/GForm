@@ -1,5 +1,5 @@
 <?php
-require '../assets/vendor/autoload.php'; 
+require_once "../assets/serverConfig.php";
 
 //Resolves Every Code Error into Server Error
 function ServerError(){
@@ -13,20 +13,7 @@ if($_SERVER["REQUEST_METHOD"]=="GET"){
     header("Method Not Allowed",true,405);
 }
 
-//-----------------------------------------------------------------------------------------------//
-//                                       SERVER VARIABLES                                        //
-//===============================            MongoDB             ================================//
-$mongoIP="localhost";
-$mongoPort = "27017";
 
-$userProfile = (new MongoDB\Client("mongodb://{$mongoIP}:{$mongoPort}"))->GFormDB->userProfiles;
-//================================            REDIS               ===============================//
-$redisIP = "127.0.0.1";
-$redisPort = 6379;
-
-$redis = new Redis();
-$redis->connect($redisIP,$redisPort);
-//------------------------------------------------------------------------------------------------//
 
 
 $sessionId = $_POST['SessionID'];

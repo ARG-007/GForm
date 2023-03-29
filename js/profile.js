@@ -25,7 +25,7 @@ function processResponse(content){
 function updateDB(form){
     let formData=new FormData(form);
     formData.append("REQUEST","FORM_PUT");
-    formData.append("SessionID",window.localStorage.getItem("SessionID")    );
+    formData.append("SessionID",window.localStorage.getItem("SessionID"));
     $.ajax({
         type: "POST",
         url: "php/profile.php",
@@ -35,4 +35,9 @@ function updateDB(form){
         success: (data)=>console.log(data),
         error: (data)=>console.log(data),
     })
+}
+
+function logOut(){
+    window.localStorage.setItem("SessionID",null);
+    location.href="index.html";
 }

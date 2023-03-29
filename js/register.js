@@ -24,7 +24,6 @@ function processResponse(response){
             $("#emailBox").addClass("is-invalid");
             break;
         default :
-            window.localStorage.setItem("SessionID",response.trim());
-            location.href="profile.html";
+            location.href="login.html";
     }
 }
