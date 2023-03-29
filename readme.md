@@ -12,8 +12,8 @@
 ## Server Environment:
 
 ### PHP Server
->- version: 8.1.2
->- Extensions: MongoDB, Redis
+- version: 8.1.2
+- Extensions: MongoDB, Redis
 
 ### MySQL
 > - version: Use Latest
