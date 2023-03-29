@@ -19,12 +19,14 @@
     <div class="form-container center container">
         <form>
             <div class="form-floating mb-3">
-                <input name="email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                <label for="floatingInput">Email address</label>
+                <input name="email" type="email" class="form-control" id="emailBox" placeholder="name@example.com">
+                <label for="emailBox">Email address</label>
+                <div class="invalid-feedback" id="emailInvalid"></div>
             </div>
             <div class="form-floating mb-3">
-                <input  name="password" type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                <label for="floatingPassword">Password</label>
+                <input  name="password" type="password" class="form-control" id="password" placeholder="Password">
+                <label for="password">Password</label>
+                <div class="invalid-feedback" id="passInvalid">Password is Invalid</div>
             </div>
             <div class="mb-3 form-check">
                 <input type="checkbox" class="form-check-input" id="keepLogCheck" name="">

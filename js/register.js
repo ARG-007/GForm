@@ -8,8 +8,22 @@ function process(form){
         data: formData,
         processData: false,
         contentType: false,
-        success: (response) => console.log(response),
+        success: processResponse,
         error: (error) => console.log(error),
     });
 
+}
+
+
+function processResponse(response){
+    console.log(response);
+    switch(response){
+        case "SERVER_ERROR" : return;
+        case "USER_EXISTS": 
+            $("#emailInvalid").html("User Already Exists! <a href='login.html'>Log In</a> Instead");
+            $("#emailBox").addClass("is-invalid");
+            break;
+        default :
+            window.localStorage.setItem("SessionID",response.trim());
+    }
 }
