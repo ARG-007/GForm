@@ -48,6 +48,6 @@
 ### THE ABOVE REQUIREMENTS ARE NEEDED FOR EXECUTION OF THE PROJECT
 
 ### Deviations
- - `test.php` : Used for Quick Mock of Codes
+ - `test.php` : Used for Quick PHP Code Testing
  -  ### Nothing Else !!!
 
