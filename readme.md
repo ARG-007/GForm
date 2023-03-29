@@ -13,7 +13,7 @@
 
 ### PHP Server
 - version: 8.1.2
-- Extensions: MongoDB, Redis
+- Extensions: `MongoDB`, `Redis`
 
 ### MySQL
  - version: Use Latest
