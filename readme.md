@@ -48,8 +48,8 @@
 ### THE ABOVE REQUIREMENTS ARE NEEDED FOR EXECUTION OF THE PROJECT
 
 ### Deviations
-> - `test.php` : Used for Quick Mock of Codes
-> -  ### Nothing Else !!!
+ - `test.php` : Used for Quick Mock of Codes
+ -  ### Nothing Else !!!
 
 ### `SOME UI ELEMENTS ARE UNFINISHED LIKE PROMPT WHEN USER SAVES`
 
