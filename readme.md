@@ -23,10 +23,10 @@
  - Password: `root`
  - Database Name : `gform_regdb`
  - Table : `register`
- - Table Columns: `pid`,`email`,`password` -> pk: pid
+ - Table Columns: `pid`,`email`,`password` -> pid : PrimaryKey, AutoIncrement
  - Server IP: localhost(`127.0.0.1`) 
  - Server Port: `3306` 
- Used In Pages :
+ <br> Used In Pages :
  - `register.php` (For Credentials Storing) 
  - `login.php` (For Authentication)
 
