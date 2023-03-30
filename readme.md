@@ -23,6 +23,7 @@
  - Password: `root`
  - Database Name : `gform_regdb`
  - Table : `register`
+ - Table Columns: pid,email,password -> pk: pid
  - Server IP: localhost(`127.0.0.1`) 
  - Server Port: `3306` 
  Used In Pages :
