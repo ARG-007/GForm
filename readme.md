@@ -1,7 +1,7 @@
-# Guvi Technical Task - Form With Register, Login, Profile Flow
+# GForm - Giga Form With Register, Login, Profile Flow
 
 ## Project Description:
-    Design Three Forms : Register, Login, Profile to Store User accounts and their profile details
+    Designed Three Forms : Register, Login, Profile to Store User accounts and their profile details by incorporating MySQL, Redis, MongoDB and PHP. This is just a project to test out features of each technology.
 
 ## Project :
 - MySQL to store User Credentials
@@ -48,7 +48,9 @@
  <br> Used In Pages: `register.php`, `login.php`, `profile.php` 
 
 
-### Deviations
- - `testDB.php` : Used for Inspecting Databases
- -  ### Nothing Else !!!
+### Note
+
+> `testDB.php` 
+
+This is Used for Inspecting Databases. This can be accessed through TestDB Button present in login page
 
