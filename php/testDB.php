@@ -40,6 +40,10 @@ td,th{
     text-align: left;
 }
 
+.mongo td:hover{
+    box-shadow: none;
+}
+
 .mongo td>:first-child{
     color: brown;
 }

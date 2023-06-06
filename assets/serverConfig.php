@@ -5,10 +5,10 @@ require '../assets/vendor/autoload.php';
 //===============================             MySQL             =================================//
 $host="127.0.0.1";
 $port=3306;
-$user="root";
-$password="root";
-$dbname="gform_regdb";
-$table="register";
+$user="gform";
+$password="gform";
+$dbname="GFormDB";
+$table="RegisteredUsers";
 
 $sql = new mysqli($host,$user,$password,$dbname,$port) or die("Connection Failed : ".$sql->connect_error);
 //===============================            MongoDB             ================================//
